@@ -43,8 +43,6 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
     // console.table(canDrink);
 
     //Filter
-    const canDrink = ages.filter((age,index,ages) => {
-        if(age >21) return true;
-    })
+    const canDrink = ages.filter((age,index,ages) => age > 21?true : false);
 
     console.table(canDrink);
