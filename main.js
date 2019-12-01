@@ -30,13 +30,21 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
 
     //filtering in old way
     //1.Declare a new array
-    let canDrink = [];
-    //2.Start for loop
-    for(let i=0;i<ages.length;i++) {
-        //3. check for each currently iteration is greater than 21
-        if(ages[i] > 21) {
-            //4. push the result to the canDrink array
-            canDrink.push(ages[i]);
-        }
-    }
+    // let canDrink = [];
+    // //2.Start for loop
+    // for(let i=0;i<ages.length;i++) {
+    //     //3. check for each currently iteration is greater than 21
+    //     if(ages[i] > 21) {
+    //         //4. push the result to the canDrink array
+    //         canDrink.push(ages[i]);
+    //     }
+    // }
+    
+    // console.table(canDrink);
+
+    //Filter
+    const canDrink = ages.filter((age,index,ages) => {
+        if(age >21) return true;
+    })
+
     console.table(canDrink);
