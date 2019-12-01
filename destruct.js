@@ -42,5 +42,20 @@ function fk() {
 
 let g,h;
 [g,h] = fk();
-console.log(g);
-console.log(h);
+// console.log(g);
+// console.log(h);
+
+//Ignoring some returned values
+
+function kf() {
+    return [1,2,3];
+}
+
+const[i, ,k] = kf();
+// console.log(i);
+// console.log(k);
+
+//Assigning the rest of an array to a variable
+const [l,...m] = [1,2,3,4];
+console.log(l);
+console.log(m);
