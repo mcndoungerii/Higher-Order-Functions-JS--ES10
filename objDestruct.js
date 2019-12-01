@@ -15,8 +15,14 @@ let a,b;
 // console.log(b);
 
 //3. Assigning to new variable names
-const o = {r: 42, s: true};
-const {r: foo, s: bar} = 0;
+const obj = {r: 42, s: true};
+const {r: foo, s: bar} = obj;
 
-console.log(r);
-console.log(s);
+// console.log(foo);
+// console.log(bar);
+
+//4.Default value
+
+const{car=5, bike=6} = {car: 1};
+console.log(car);
+console.log(bike);
