@@ -24,5 +24,10 @@ const {r: foo, s: bar} = obj;
 //4.Default value
 
 const{car=5, bike=6} = {car: 1};
-console.log(car);
-console.log(bike);
+// console.table(car);
+// console.log(bike);
+
+//5.Assigning to new variables names and providing default values
+const{d: dd=10, f: ff=10} = {d:13};
+console.log(dd);
+console.log(ff);
