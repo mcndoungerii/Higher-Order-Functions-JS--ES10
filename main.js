@@ -26,7 +26,7 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
     }
 
     //for Each
-    companies.forEach((company,index,companies) => console.table(company.name));
+    // companies.forEach((company,index,companies) => console.table(company.name));
 
 
 //FILTERING AGE 21 AND ABOVE
@@ -94,4 +94,12 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
     
     //Sort by ages in DESC
     const sortedAgesDESC = ages.sort((a,b) => b - a);
-    console.table(sortedAgesDESC);
+    
+
+    //REDUCE
+
+    let ageSum = 0;
+    for(let i=0; i<ages.length; i++) {
+        ageSum += ages[i];
+    }
+    console.log(ageSum);
