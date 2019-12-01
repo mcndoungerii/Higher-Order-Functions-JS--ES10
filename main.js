@@ -1,4 +1,4 @@
-const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2011},
+const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2004},
     {"name": "Janyx", "category": "retail", "start": 1998, "end": 1985},
     {"name": "Realcube", "category": "jcb", "start": 2005, "end": 1998},
     {"name": "Jayo", "category": "switch", "start": 1985, "end": 2011},
@@ -62,5 +62,9 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
     // console.table(retailCompanies);
 
     //GET 90's Companies
-    const ninetyCompanies = companies.filter(company => (company.start >= 1990 && company.start < 2000));
-    console.table(ninetyCompanies);
+    // const ninetyCompanies = companies.filter(company => (company.start >= 1990 && company.start < 2000));
+    // console.table(ninetyCompanies);
+
+    //GET Companies that Lasted 10 years
+    const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
+    console.table(lastedTenYears);
