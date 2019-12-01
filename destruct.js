@@ -34,3 +34,13 @@ let f = 3;
 const arr = [1,2,3,4,5];
 [arr[2], arr[1]] = [arr[1], arr[2]];
 //console.log(arr);  arr[2] = 3 === 2, arr[1] = 2 === 3; arr = [1,3,2]
+
+// Parsing an array returned from a function
+function fk() {
+    return [1,2];
+}
+
+let g,h;
+[g,h] = fk();
+console.log(g);
+console.log(h);
