@@ -67,4 +67,10 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
 
     //GET Companies that Lasted 10 years
     const lastedTenYears = companies.filter(company => (company.end - company.start >= 10));
-    console.table(lastedTenYears);
+    
+
+    //MAP
+
+    //Get companies names
+    const companyNames = companies.map(company => company.name);
+    console.table(companyNames);
