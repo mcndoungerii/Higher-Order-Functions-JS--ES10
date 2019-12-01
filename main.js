@@ -82,4 +82,10 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
     const newAges = ages.map(age => Math.sqrt(age));
     
     const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2);
-    console.table(ageMap);
+    
+
+    //SORT
+    //Sort by the Start Date
+
+    const sortedCompanies = companies.sort((c1,c2) => (c1.start > c2.start)? 1: -1);
+    console.table(sortedCompanies);
