@@ -103,6 +103,10 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
         ageSum += ages[i];
     }
     
-    //Using REDUCE 
+    //Using REDUCE to get sum of ages
     const ageSumWithReduce = ages.reduce((total,age) => total + age,0);
-    console.table(ageSumWithReduce);
+    
+
+    //Using REDUCE to get sum of Range years of a company
+    const rangeYearSum = companies.reduce((total,company) => total + (company.end - company.start),0);
+    console.table(rangeYearSum);
