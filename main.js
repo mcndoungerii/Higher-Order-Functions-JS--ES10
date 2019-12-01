@@ -88,4 +88,10 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
     //Sort by the Start Date
 
     const sortedCompanies = companies.sort((c1,c2) => (c1.start > c2.start)? 1: -1);
-    console.table(sortedCompanies);
+    
+    //Sort by ages in ASC
+    const sortedAges = ages.sort((a,b) => a - b);
+    
+    //Sort by ages in DESC
+    const sortedAgesDESC = ages.sort((a,b) => b - a);
+    console.table(sortedAgesDESC);
