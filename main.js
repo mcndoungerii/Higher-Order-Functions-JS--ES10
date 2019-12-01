@@ -109,4 +109,14 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
 
     //Using REDUCE to get sum of Range years of a company
     const rangeYearSum = companies.reduce((total,company) => total + (company.end - company.start),0);
-    console.table(rangeYearSum);
+    
+
+    //Combined functions for ages
+
+    const combined = ages
+    .map(age => age * 2)
+    .filter(age => age >= 40)
+    .sort((a,b) => a - b)
+    .reduce((a,b) => a + b,0);
+
+    console.table(`The Combined Ages value is ${combined}`)
