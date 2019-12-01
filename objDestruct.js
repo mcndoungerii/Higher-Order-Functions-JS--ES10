@@ -29,5 +29,27 @@ const{car=5, bike=6} = {car: 1};
 
 //5.Assigning to new variables names and providing default values
 const{d: dd=10, f: ff=10} = {d:13};
-console.log(dd);
-console.log(ff);
+// console.log(dd);
+// console.log(ff);
+
+//Unpacking fields from objects passed as function parameter
+
+const user = {
+  id: 42,
+  displayName: 'jdoe',
+  fullName: {
+        firstName: 'Joao',
+        lastName: 'Felix'
+    }
+};
+
+function userId({id}) {
+    return id;
+}
+
+function whoIs({displayName, fullName:{lastName: name}}) {
+    return `${displayName} is ${name}`;
+}
+
+console.log(userId(user));
+console.log(whoIs(user));
