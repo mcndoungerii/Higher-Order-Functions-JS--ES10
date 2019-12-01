@@ -58,5 +58,9 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
 
 //FILTERING RETAIL COMPANIES
 
-    const retailCompanies = companies.filter(company => company.category === 'retail');
-    console.table(retailCompanies);
+    // const retailCompanies = companies.filter(company => company.category === 'retail');
+    // console.table(retailCompanies);
+
+    //GET 90's Companies
+    const ninetyCompanies = companies.filter(company => (company.start >= 1990 && company.start < 2000));
+    console.table(ninetyCompanies);
