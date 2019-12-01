@@ -102,4 +102,7 @@ const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
     for(let i=0; i<ages.length; i++) {
         ageSum += ages[i];
     }
-    console.log(ageSum);
+    
+    //Using REDUCE 
+    const ageSumWithReduce = ages.reduce((total,age) => total + age,0);
+    console.table(ageSumWithReduce);
