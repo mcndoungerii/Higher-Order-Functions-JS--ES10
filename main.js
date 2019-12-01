@@ -18,32 +18,32 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
     {"name": "Photospace", "category": "diners-club-enroute", "start": 1967, "end": 1983}
 ];
 
-// const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
+const ages = [41,32,19,45,34,25,26,28,32,45,67,71,18,19,16,76];
 
     //for loop
-    // for (let i = 0; i < companies.length; i++) {
-    //     console.table(companies[i]);
-    // }
+    for (let i = 0; i < companies.length; i++) {
+        // console.table(companies[i]);
+    }
 
     //for Each
-    // companies.forEach((company,index,companies) => console.table(company.name));
+    companies.forEach((company,index,companies) => console.table(company.name));
 
 
 //FILTERING AGE 21 AND ABOVE
 
     //filtering in old way
     //1.Declare a new array
-    // let canDrink = [];
-    // //2.Start for loop
-    // for(let i=0;i<ages.length;i++) {
-    //     //3. check for each currently iteration is greater than 21
-    //     if(ages[i] > 21) {
-    //         //4. push the result to the canDrink array
-    //         canDrink.push(ages[i]);
-    //     }
-    // }
+    let canDrink = [];
+    //2.Start for loop
+    for(let i=0;i<ages.length;i++) {
+        //3. check for each currently iteration is greater than 21
+        if(ages[i] > 21) {
+            //4. push the result to the canDrink array
+            canDrink.push(ages[i]);
+        }
+    }
     
-    // console.table(canDrink);
+    
 
     //Filter (ES6 way)
 
@@ -52,17 +52,17 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
     //Filter (ES6 way)
     // const canDrink = ages.filter(age => age>21);
 
-    // console.table(canDrink);
+   
 
 
 
 //FILTERING RETAIL COMPANIES
 
-    // const retailCompanies = companies.filter(company => company.category === 'retail');
+    const retailCompanies = companies.filter(company => company.category === 'retail');
     // console.table(retailCompanies);
 
     //GET 90's Companies
-    // const ninetyCompanies = companies.filter(company => (company.start >= 1990 && company.start < 2000));
+    const ninetyCompanies = companies.filter(company => (company.start >= 1990 && company.start < 2000));
     // console.table(ninetyCompanies);
 
     //GET Companies that Lasted 10 years
@@ -76,4 +76,8 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
     
     //Get company names & their start to end years
     const test = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
-    console.table(test);
+    
+    //Get a new Array of Squared ages
+
+    const newAges = ages.map(age => Math.sqrt(age));
+    console.table(newAges);
