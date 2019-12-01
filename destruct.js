@@ -57,5 +57,17 @@ const[i, ,k] = kf();
 
 //Assigning the rest of an array to a variable
 const [l,...m] = [1,2,3,4];
-console.log(l);
-console.log(m);
+// console.log(l);
+// console.log(m);
+
+//Unpacking values from a regular expression match
+function parseProtocol(url) {
+    const parsedUrl = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
+    if(!parsedUrl) {
+        return false;
+    }
+
+    const [, protocol, fullhost, fullpath] = parsedUrl;
+    return fullhost
+}
+console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript'));
