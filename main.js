@@ -73,4 +73,7 @@ const companies =[{"name": "Demivee", "category": "jcb", "start": 1994, "end": 2
 
     //Get companies names
     const companyNames = companies.map(company => company.name);
-    console.table(companyNames);
+    
+    //Get company names & their start to end years
+    const test = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
+    console.table(test);
