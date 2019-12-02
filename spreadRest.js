@@ -3,5 +3,10 @@
 
 var myName = ["Marina","Magdy","shafiq"];
 const [firstName,...familyName] = myName;
-console.log(firstName);
-console.log(familyName); // ["Magdy","Shafiq"]
+// console.log(firstName);
+// console.log(familyName); // ["Magdy","Shafiq"]
+
+function myData(...args) {
+    console.log(args);
+}
+myData("Marina","Magdy","Shafiq");
