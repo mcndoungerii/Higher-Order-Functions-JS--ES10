@@ -25,3 +25,35 @@ const usersFlattened = userss.flatMap(([name,age,followers]) => {
     return {name,age,followers};
 })
 console.log(usersFlattened);
+
+//5-6. String.trimStart() & String.trimEnd()
+/* 
+    String.trimStart method removes whitespace from the beginning of a string, and String.trimEnd method removes whitespace from the end of a string. Both of them have an alias, trimLeft and trimRight correspondingly.
+ */
+
+ const message = '   Hello ES10   ';
+
+// console.log(message.trimStart()); // outputs 'Hello ES10   '
+// console.log(message.trimEnd()); // outputs '   Hello ES10'
+
+//7. Dynamic Import
+
+//let this is file: my-path/my-module.js
+
+export default () => console.log('Do Default');
+
+export const doSomething = () => console.log('Do Something');
+
+//We are now able to import it dynamically in one of the following ways:
+//1.
+import('..mypath/my-module.js').then((module) => {
+    module.default();
+    module.doSomething();
+});
+
+//OR
+(async () => {
+    const module = import('..my-path/my-module.js')
+    module.default();
+    module.doSomething();
+})();
