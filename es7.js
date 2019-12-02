@@ -77,8 +77,17 @@ Object.entries(obj).forEach(([key,value]) => {
         letter: key
     };
 
-    console.log(newObjValue);
+    // console.log(newObjValue);
     
 
-})
+});
+
+//Object.entries -- for od loop
+for(let [key,value] of Object.entries(obj)) {
+    let newObj = {
+        id: value,
+        letter: key
+    }
+    console.log(newObj);
+}
 
