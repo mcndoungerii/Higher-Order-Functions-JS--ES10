@@ -128,6 +128,12 @@ let {[key]: foof} = {z: 'bar'};
 
 // Rest in Object Destructuring
 let {r,s, ...rest} = {r: 10, s: 20, t: 30, u: 40}
-console.log(r);
-console.log(s);
-console.table(rest);
+// console.log(r);
+// console.log(s);
+// console.table(rest);
+
+//Invalid JavaScript identifier as a property name
+const fooden = {'fizz-buzz': true};
+const {'fizz-buzz': fizzBuzz} = fooden;
+
+console.log(fizzBuzz);
