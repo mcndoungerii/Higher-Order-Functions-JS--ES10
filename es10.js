@@ -24,7 +24,7 @@ const userss = [['John', 49, 96], ['Frank', 25, 388], ['Davis',36, 14]];
 const usersFlattened = userss.flatMap(([name,age,followers]) => {
     return {name,age,followers};
 })
-console.log(usersFlattened);
+// console.log(usersFlattened);
 
 //5-6. String.trimStart() & String.trimEnd()
 /* 
@@ -40,20 +40,33 @@ console.log(usersFlattened);
 
 //let this is file: my-path/my-module.js
 
-export default () => console.log('Do Default');
+// export default () => console.log('Do Default');
 
-export const doSomething = () => console.log('Do Something');
+// export const doSomething = () => console.log('Do Something');
 
 //We are now able to import it dynamically in one of the following ways:
 //1.
-import('..mypath/my-module.js').then((module) => {
-    module.default();
-    module.doSomething();
-});
+// import('..mypath/my-module.js').then((module) => {
+//     module.default();
+//     module.doSomething();
+// });
 
-//OR
-(async () => {
-    const module = import('..my-path/my-module.js')
-    module.default();
-    module.doSomething();
-})();
+// //OR
+// (async () => {
+//     const module = import('..my-path/my-module.js')
+//     module.default();
+//     module.doSomething();
+// })();
+
+//8. globalThis Object
+const getGlobal = function() {
+    if(typeof self !== 'undefined') return self;
+    if(typeof window !== 'undefined')return window;
+    if(typeof global !== 'undefined'){return global;}
+    throw new Error('unable to locate global object');
+}
+
+const global = getGlobal();
+
+const numberss = new global.Array(1,2,3);
+console.log(numberss);
