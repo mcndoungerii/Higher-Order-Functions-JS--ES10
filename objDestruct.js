@@ -124,4 +124,10 @@ for(const {name: n, family: {father: f}} of people) {
 let key = 'z';
 let {[key]: foof} = {z: 'bar'};
 
-console.log(foof);
+// console.log(foof);
+
+// Rest in Object Destructuring
+let {r,s, ...rest} = {r: 10, s: 20, t: 30, u: 40}
+console.log(r);
+console.log(s);
+console.table(rest);
