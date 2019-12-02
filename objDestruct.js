@@ -51,5 +51,16 @@ function whoIs({displayName, fullName:{lastName: name}}) {
     return `${displayName} is ${name}`;
 }
 
-console.log(userId(user));
-console.log(whoIs(user));
+// console.log(userId(user));
+// console.log(whoIs(user));
+
+// Setting a function parameter's default value
+function drawChart({size = 'big', coords = {x:0, y:0}, radius = 25} = {}) {
+    console.log(size, coords, radius);
+    
+}
+
+drawChart({
+    coords: {x: 18, y: 30},
+    radius: 30
+});
