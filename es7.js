@@ -25,9 +25,15 @@ let b = 2 ** 4;
 
 //Before ES8 JavaScript developers who needed to iterate over own properties of an object had to use Object.keys, iterate over an array returned by it and use obj[key] to access each value
 let obj = {a:1, b:2, c:3};
+let newList = [];
 Object.keys(obj).forEach(key => {
     // console.log(`Key is ${key}, Value is ${obj[key]}`)
+    let newObj = {
+        number: obj[key]
+    }
+    newList.push(newObj);
 });
+console.log(newList);
 
 
 //ES6 -- use for of
@@ -44,5 +50,5 @@ Object.values(obj).forEach(value => {
     }
    newArr.push(newObj);
 })
-console.table(newArr);
+// console.table(newArr);
 
