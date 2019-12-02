@@ -136,4 +136,22 @@ let {r,s, ...rest} = {r: 10, s: 20, t: 30, u: 40}
 const fooden = {'fizz-buzz': true};
 const {'fizz-buzz': fizzBuzz} = fooden;
 
-console.log(fizzBuzz);
+//console.log(fizzBuzz);
+
+//Combined Array and Object Destructuring
+
+const props = [
+    { id: 1, name: 'Fizz'},
+    { id: 2, name: 'Buzz'},
+    { id: 3, name: 'FizzBuzz'}
+];
+
+const [,{name}, ] = props;
+// console.log(name);
+
+//The prototype chain is looked up when the object is deconstructed
+let obje = {self: '123'};
+obje.__proto__.prot = '456';
+const {self, prot} = obje;
+// console.log(self);
+// console.log(prot);
