@@ -117,5 +117,11 @@ const people = [
 ];
 
 for(const {name: n, family: {father: f}} of people) {
-    console.table(`Name: ${n}, Father: ${f}`)
+    // console.table(`Name: ${n}, Father: ${f}`)
 }
+
+//Computed object property names and destructuring
+let key = 'z';
+let {[key]: foof} = {z: 'bar'};
+
+console.log(foof);
