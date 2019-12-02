@@ -67,5 +67,18 @@ let objec = [['b',2],['h',13],['k',16]];
 const newObjec = objec.flatMap(([letter,number]) => {
     return {letter,number};
 });
-console.log(newObjec);
+// console.log(newObjec);
+
+//Using Object.entries(); -- forEach
+
+Object.entries(obj).forEach(([key,value]) => {
+    let newObjValue = {
+        id: value,
+        letter: key
+    };
+
+    console.log(newObjValue);
+    
+
+})
 
