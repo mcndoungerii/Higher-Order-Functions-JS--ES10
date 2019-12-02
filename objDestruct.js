@@ -91,5 +91,31 @@ let {
     ],
 } = metadata;
 
-console.log(englishTitle);
-console.log(localeTitle);
+// console.log(englishTitle);
+// console.log(localeTitle);
+
+//Nested object and array destructuring
+const people = [
+  {
+    name: 'Mike Smith',
+    family: {
+      mother: 'Jane Smith',
+      father: 'Harry Smith',
+      sister: 'Samantha Smith'
+    },
+    age: 35
+  },
+  {
+    name: 'Tom Jones',
+    family: {
+      mother: 'Norah Jones',
+      father: 'Richard Jones',
+      brother: 'Howard Jones'
+    },
+    age: 25
+  }
+];
+
+for(const {name: n, family: {father: f}} of people) {
+    console.table(`Name: ${n}, Father: ${f}`)
+}
