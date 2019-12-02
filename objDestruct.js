@@ -56,7 +56,7 @@ function whoIs({displayName, fullName:{lastName: name}}) {
 
 // Setting a function parameter's default value
 function drawChart({size = 'big', coords = {x:0, y:0}, radius = 25} = {}) {
-    console.log(size, coords, radius);
+    // console.log(size, coords, radius);
     
 }
 
@@ -64,3 +64,32 @@ drawChart({
     coords: {x: 18, y: 30},
     radius: 30
 });
+
+//Nested object and array destructuring
+
+const metadata = {
+    title: 'Scratchpad',
+    translations: [
+        {
+            locale: 'de',
+            localization_tags:[],
+            last_edit: '2014-04-14T08:43:37',
+            url: '/de/docs/Tools/Scratchpad',
+            title: 'JavaScript-Umgebung'
+        }
+    ],
+    url: '/en-US/docs/Tools/Scratchpad'
+};
+
+let {
+    title: englishTitle,
+    translations: [ 
+        {
+            title: localeTitle,
+        },
+        
+    ],
+} = metadata;
+
+console.log(englishTitle);
+console.log(localeTitle);
