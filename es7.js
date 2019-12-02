@@ -33,7 +33,7 @@ Object.keys(obj).forEach(key => {
     }
     newList.push(newObj);
 });
-console.log(newList);
+// console.log(newList);
 
 
 //ES6 -- use for of
@@ -51,4 +51,13 @@ Object.values(obj).forEach(value => {
    newArr.push(newObj);
 })
 // console.table(newArr);
+
+let newArrr = [];
+for(let val of Object.values(obj)) {
+    let newObj = {
+        values: val
+    }
+    newArrr.push(newObj);
+}
+console.log(newArrr);
 
