@@ -7,6 +7,13 @@ const [firstName,...familyName] = myName;
 // console.log(familyName); // ["Magdy","Shafiq"]
 
 function myData(...args) {
-    console.log(args);
+    // console.log(args);
 }
 myData("Marina","Magdy","Shafiq");
+
+//Spread Operator […spread]
+
+var myName = ["Marina","Magdy"];
+var newArr = ["Front End",...myName,24];
+
+console.log(newArr);
