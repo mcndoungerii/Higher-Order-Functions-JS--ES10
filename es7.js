@@ -59,5 +59,13 @@ for(let val of Object.values(obj)) {
     }
     newArrr.push(newObj);
 }
-console.log(newArrr);
+// console.log(newArrr);
+
+//Object.flatMap()
+let objec = [['b',2],['h',13],['k',16]];
+
+const newObjec = objec.flatMap(([letter,number]) => {
+    return {letter,number};
+});
+console.log(newObjec);
 
