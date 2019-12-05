@@ -64,5 +64,13 @@ for (let [key, value] of Object.entries(obj)) {
     name: key,
     code: value
   };
-  console.log(newObject);
+  //   console.log(newObject);
 }
+
+Object.entries(obj).forEach(([key, value]) => {
+  let newOb = {
+    name: key,
+    codeC: value
+  };
+  console.log(newOb);
+});
