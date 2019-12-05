@@ -47,10 +47,8 @@ if (arr.includes("react")) {
   throw new Error("It is Not available");
 }
 
-if (arr.indexOf("react") === -1) {
-  //   console.log("React is not available");
-} else {
-  //   console.log("React is available");
+if (arr.indexOf("react") !== -1) {
+  //   console.log("React isavailable");
 }
 
 //OR use this ~
