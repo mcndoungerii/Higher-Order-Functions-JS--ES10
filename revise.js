@@ -24,4 +24,8 @@ const resPeople = people.flatMap(([name, age, score]) => {
   return { name, age, score };
 });
 
-console.log(resPeople);
+// console.log(resPeople);
+
+const cities = ["City 1", ["City 2"], "City 3", ["City 4"]];
+
+console.table(cities.flat());
