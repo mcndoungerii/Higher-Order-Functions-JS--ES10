@@ -53,5 +53,16 @@ if (arr.indexOf("react") !== -1) {
 
 //OR use this ~
 if (~arr.indexOf("react")) {
-  console.log("React is availableee");
+  //   console.log("React is availableee");
+}
+
+//Object.entries()
+let obj = { Tanzania: 255, Kenya: 254, Uganda: 256 };
+
+for (let [key, value] of Object.entries(obj)) {
+  let newObject = {
+    name: key,
+    code: value
+  };
+  console.log(newObject);
 }
