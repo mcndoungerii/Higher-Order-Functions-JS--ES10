@@ -14,6 +14,15 @@ Object.keys(res).forEach(key => {
   //   console.log(result);
 });
 
+//OR You can use
+for (let key of Object.keys(res)) {
+  let resultObj = {
+    name: key,
+    age: res[key]
+  };
+  console.log(resultObj);
+}
+
 const people = [
   ["Jon", 56, 900],
   ["St Patricks", 41, 780],
@@ -28,4 +37,4 @@ const resPeople = people.flatMap(([name, age, score]) => {
 
 const cities = ["City 1", ["City 2"], "City 3", ["City 4"]];
 
-console.table(cities.flat());
+// console.table(cities.flat());
