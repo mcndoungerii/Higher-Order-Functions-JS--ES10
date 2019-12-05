@@ -20,7 +20,7 @@ for (let key of Object.keys(res)) {
     name: key,
     age: res[key]
   };
-  console.log(resultObj);
+  //   console.log(resultObj);
 }
 
 const people = [
@@ -38,3 +38,11 @@ const resPeople = people.flatMap(([name, age, score]) => {
 const cities = ["City 1", ["City 2"], "City 3", ["City 4"]];
 
 // console.table(cities.flat());
+
+const arr = ["react", "angular", "vue"];
+
+if (arr.includes("reactt")) {
+  console.log("React is available");
+} else {
+  throw new Error("It is Not available");
+}
