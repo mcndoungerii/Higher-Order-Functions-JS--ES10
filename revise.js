@@ -41,8 +41,19 @@ const cities = ["City 1", ["City 2"], "City 3", ["City 4"]];
 
 const arr = ["react", "angular", "vue"];
 
-if (arr.includes("reactt")) {
-  console.log("React is available");
+if (arr.includes("react")) {
+  //   console.log("React is available");
 } else {
   throw new Error("It is Not available");
+}
+
+if (arr.indexOf("react") === -1) {
+  //   console.log("React is not available");
+} else {
+  //   console.log("React is available");
+}
+
+//OR use this ~
+if (~arr.indexOf("react")) {
+  console.log("React is availableee");
 }
