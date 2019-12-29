@@ -70,7 +70,7 @@ let objec = [
 const newObjec = objec.flatMap(([letter, number]) => {
   return { letter, number };
 });
-// console.log(newObjec);
+console.log(newObjec);
 
 //Using Object.entries(); -- forEach
 
