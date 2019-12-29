@@ -18,9 +18,14 @@ class Book {
     this.year = newYear;
     this.reversed = true;
   }
+
+  static topStory() {
+    return "Barnes $ Langley";
+  }
 }
 
 //Instance of an Object
 const book1 = new Book("Rich Kid, Poor Daddy", "Robert Kiwasaki", "2002");
 book1.reverse("2012");
-console.log(book1);
+// console.log(book1);
+console.log(Book.topStory());
