@@ -8,8 +8,10 @@ const bookProtos = {
   }
 };
 
-const book1 = Object.create(bookProtos);
-book1.title = "Mabala The Farmer";
-book1.author = "Mabala S. Richard";
-book1.year = 2016;
+const book1 = Object.create(bookProtos, {
+  title: { value: "Mabala The Farmer" },
+  author: { value: "Richard S. Mabala" },
+  year: { value: 2019 }
+});
+
 console.log(book1);
